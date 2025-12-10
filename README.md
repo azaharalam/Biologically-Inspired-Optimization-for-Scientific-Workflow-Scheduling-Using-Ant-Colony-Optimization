@@ -38,7 +38,8 @@ choco install python
 ## 2. Clone the Project
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/azaharalam/Biologically-Inspired-Optimization-for-Scientific-Workflow-Scheduling-Using-Ant-Colony-Optimization
+cd Biologically-Inspired-Optimization-for-Scientific-Workflow-Scheduling-Using-Ant-Colony-Optimization
 cd YOUR_REPO
 ```
 
