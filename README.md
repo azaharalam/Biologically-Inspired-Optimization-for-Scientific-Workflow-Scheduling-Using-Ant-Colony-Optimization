@@ -1,143 +1,82 @@
 # Biologically-Inspired-Optimization-for-Scientific-Workflow-Scheduling-Using-Ant-Colony-Optimization
 
 
-Biologically Inspired Workflow Scheduling using Ant Colony Optimization (ACO)
+# Quick Start Guide
 
-This repository contains a complete implementation of a biologically inspired optimization framework for scientific workflow scheduling using Ant Colony Optimization (ACO). The project includes:
+## 1. Check if Python is Installed
 
-Scheduling the Montage workflow trace using FIFO, SJF, Min-Min, HEFT, and ACO
-
-Makespan comparison
-
-Convergence plots
-
-Critical-path Gantt chart
-
-LaTeX paper (IEEE format) generation
-
-The implementation supports Linux, macOS, and Windows.
-
-Key Features
-ACO-Based Scheduler
-
-Dependency-aware task ordering
-
-Earliest-finish-time machine assignment
-
-Pheromone update + evaporation
-
-Iteration-wise convergence logging
-
-Baseline Algorithms
-
-FIFO
-
-SJF
-
-Min-Min
-
-HEFT
-
-Visualization
-
-Makespan bar chart
-
-Convergence line plot
-
-Gantt chart (critical-path annotated)
-
-Research Paper
-
-Full IEEE LaTeX paper (paper/main.tex)
-
-Includes citations, equations, algorithms, and figures
-
-Project Structure
-BioInspiredWorkflowACO/
-│
-├── README.md
-├── src/
-│   ├── main.py
-│   ├── schedulers/
-│   │   ├── aco_scheduler.py
-│   │   ├── fifo.py
-│   │   ├── sjf.py
-│   │   ├── minmin.py
-│   │   └── heft.py
-│   ├── utils/
-│   │   ├── dag_loader.py
-│   │   └── plotting.py
-│   └── analysis/
-│       ├── gantt_chart.py
-│       └── critical_path.py
-│
-├── figures/
-│   ├── makespan_bar_chart.png
-│   ├── convergence.png
-│   └── gannt_chart.png
-│
-├── data/
-│   └── tasks.json
-│
-├── paper/
-│   ├── main.tex
-│   └── refs.bib
-
-Installation
-
-You can run this project on Linux, macOS, or Windows.
-
-1. Install Python
-
-You need Python 3.10 or later.
-
-Check your version:
-
-Linux/macOS:
-
+### Linux / macOS
+```bash
 python3 --version
+```
 
-
-Windows:
-
+### Windows
+```powershell
 python --version
+```
 
+### If Python is NOT installed
 
-If Python is missing, download it from:
-https://www.python.org/downloads/
+#### Ubuntu / Debian
+```bash
+sudo apt update
+sudo apt install python3 python3-pip -y
+```
 
-2. Install Dependencies
+#### macOS (Homebrew)
+```bash
+brew install python
+```
 
-From the project root:
+#### Windows (Chocolatey)
+```powershell
+choco install python
+```
 
-pip install -r requirements.txt
+---
 
+## 2. Clone the Project
 
-If you do not have a requirements.txt, you can create one containing:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
+```
 
-numpy
-matplotlib
-networkx
-pandas
-tqdm
+---
 
-Running the Project
-1. Run all schedulers and generate results
+## 3. Checkout to the Master Branch
+
+```bash
+git checkout master
+```
+
+---
+
+## 4. Install Required Dependencies
+
+If requirements.txt exists:
+```bash
+pip3 install -r requirements.txt
+```
+
+Otherwise manually install:
+```bash
+pip3 install numpy matplotlib networkx pandas tqdm
+```
+
+---
+
+## 5. Run All Schedulers
+
+```bash
 python3 src/main.py
+```
 
+This runs:
+- FIFO
+- SJF
+- Min-Min
+- HEFT
+- ACO
 
-This will:
-
-Load the tasks.json workflow DAG
-
-Execute FIFO, SJF, Min-Min, HEFT, and ACO
-
-Generate plots:
-
-makespan_bar_chart.png
-
-convergence.png
-
-gannt_chart.png
-
-Print makespan comparison to the terminal
+And prints makespan results.
