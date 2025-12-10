@@ -40,7 +40,6 @@ choco install python
 ```bash
 git clone https://github.com/azaharalam/Biologically-Inspired-Optimization-for-Scientific-Workflow-Scheduling-Using-Ant-Colony-Optimization
 cd Biologically-Inspired-Optimization-for-Scientific-Workflow-Scheduling-Using-Ant-Colony-Optimization
-cd YOUR_REPO
 ```
 
 ---
