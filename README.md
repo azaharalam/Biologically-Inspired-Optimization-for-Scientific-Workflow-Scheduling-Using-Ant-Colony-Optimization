@@ -1,34 +1,34 @@
 # Biologically-Inspired-Optimization-for-Scientific-Workflow-Scheduling-Using-Ant-Colony-Optimization
 
 
-#📌 Overview
+Biologically Inspired Workflow Scheduling using Ant Colony Optimization (ACO)
 
-This repository contains the full implementation of a biologically inspired optimization framework for scientific workflow scheduling using Ant Colony Optimization (ACO). The project reproduces a complete evaluation pipeline used in the research paper:
+This repository contains a complete implementation of a biologically inspired optimization framework for scientific workflow scheduling using Ant Colony Optimization (ACO). The project includes:
 
-Scheduling Montage workflow trace using five algorithms
+Scheduling the Montage workflow trace using FIFO, SJF, Min-Min, HEFT, and ACO
 
-Producing makespan comparisons
+Makespan comparison
 
-Generating convergence plots
+Convergence plots
 
-Producing critical-path Gantt charts
+Critical-path Gantt chart
 
-Fully compiling the research LaTeX document
+LaTeX paper (IEEE format) generation
 
-The implementation is dependency-aware, machine-aware, and designed to be run easily on Linux, macOS, or Windows.
+The implementation supports Linux, macOS, and Windows.
 
-🧠 Key Features
-✅ Full ACO-based Scheduler
+Key Features
+ACO-Based Scheduler
 
 Dependency-aware task ordering
 
 Earliest-finish-time machine assignment
 
-Pheromone reinforcement & evaporation
+Pheromone update + evaporation
 
-Convergence logging
+Iteration-wise convergence logging
 
-✅ Baseline Algorithms
+Baseline Algorithms
 
 FIFO
 
@@ -38,21 +38,21 @@ Min-Min
 
 HEFT
 
-✅ Visualization Suite
+Visualization
 
 Makespan bar chart
 
-Convergence curve
+Convergence line plot
 
-Critical-path Gantt chart
+Gantt chart (critical-path annotated)
 
-✅ Complete LaTeX Paper
+Research Paper
 
-IEEE conference style
+Full IEEE LaTeX paper (paper/main.tex)
 
-Includes citations, figs, algorithms
+Includes citations, equations, algorithms, and figures
 
-📂 Project Structure
+Project Structure
 BioInspiredWorkflowACO/
 │
 ├── README.md
@@ -83,32 +83,37 @@ BioInspiredWorkflowACO/
 │   ├── main.tex
 │   └── refs.bib
 
-🛠️ Installation
+Installation
 
-You can run this project on Linux, macOS, or Windows (with Python installed).
+You can run this project on Linux, macOS, or Windows.
 
-🔧 Step 1 — Install Python
+1. Install Python
 
-Ensure Python 3.10+ is installed:
+You need Python 3.10 or later.
+
+Check your version:
 
 Linux/macOS:
+
 python3 --version
 
+
 Windows:
+
 python --version
 
 
-If Python is missing, install it from https://www.python.org
-.
+If Python is missing, download it from:
+https://www.python.org/downloads/
 
-📦 Step 2 — Install Dependencies
+2. Install Dependencies
 
-From your project root directory:
+From the project root:
 
 pip install -r requirements.txt
 
 
-If a requirements.txt is not generated yet, here is a good one:
+If you do not have a requirements.txt, you can create one containing:
 
 numpy
 matplotlib
@@ -116,18 +121,18 @@ networkx
 pandas
 tqdm
 
-▶️ Running the Project
-🏁 1. Run the schedulers and generate results
+Running the Project
+1. Run all schedulers and generate results
 python3 src/main.py
 
 
 This will:
 
-Load tasks.json
+Load the tasks.json workflow DAG
 
-Run FIFO, SJF, Min-Min, HEFT, and ACO
+Execute FIFO, SJF, Min-Min, HEFT, and ACO
 
-Save:
+Generate plots:
 
 makespan_bar_chart.png
 
@@ -135,4 +140,4 @@ convergence.png
 
 gannt_chart.png
 
-Print the makespan summary to terminal
+Print makespan comparison to the terminal
